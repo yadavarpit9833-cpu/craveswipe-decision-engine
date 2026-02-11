@@ -224,7 +224,7 @@ This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LI
 ## 📞 Support & Contact
 
 -   🐛 Issues: [GitHub Issues](https://github.com/yadavarpit9833-cpu/craveswipe-decision-engine/issues)
--   📧 Contact: [yadavarpit9833@email.com] <!-- TODO: Add actual contact email -->
+-   📧 Contact: [nikunjrustagi1@gmail.com] <!-- TODO: Add actual contact email -->
 
 ---
 
@@ -232,6 +232,6 @@ This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LI
 
 **⭐ Star this repo if you find it helpful!**
 
-Made with ❤️ by [Arpit Yadav] <!-- TODO: Add author name -->
+Made with ❤️ by [Nikunj Rustagi] <!-- TODO: Add author name -->
 
 </div>
