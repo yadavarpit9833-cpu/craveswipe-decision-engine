@@ -36,6 +36,7 @@ const ResultsSummary = ({ matches, skipped, onRestart }: ResultsSummaryProps) =>
                 <span className="text-3xl">{food.emoji}</span>
                 <div className="flex-1">
                   <p className="font-mono font-bold text-foreground">{food.name}</p>
+                  <p className="text-[10px] font-mono text-muted-foreground mt-0.5">📍 {food.address}</p>
                   <div className="flex gap-1 mt-1">
                     {food.tags.slice(0, 3).map((tag) => (
                       <span key={tag} className="text-xs font-mono text-primary">
