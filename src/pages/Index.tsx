@@ -4,9 +4,12 @@ import { foods, FoodItem } from "@/data/foods";
 import FoodCard from "@/components/FoodCard";
 import MatchNotification from "@/components/MatchNotification";
 import ResultsSummary from "@/components/ResultsSummary";
+import LoginScreen from "@/components/LoginScreen";
+import ProfileBadge from "@/components/ProfileBadge";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [matches, setMatches] = useState<FoodItem[]>([]);
   const [skipped, setSkipped] = useState<FoodItem[]>([]);
@@ -41,6 +44,10 @@ const Index = () => {
     setMatchFood(null);
     setShowMatch(false);
   };
+
+  if (!loggedIn) {
+    return <LoginScreen onLoginSuccess={() => setLoggedIn(true)} />;
+  }
 
   if (!started) {
     return (
@@ -95,9 +102,12 @@ const Index = () => {
         <h1 className="font-pixel text-sm text-primary text-glow-cyan">
           CRAVE<span className="text-secondary text-glow-magenta">SWIPE</span>
         </h1>
-        <span className="font-mono text-xs text-muted-foreground">
-          {currentIndex}/{foods.length}
-        </span>
+        <div className="flex items-center gap-4">
+          <span className="font-mono text-xs text-muted-foreground">
+            {currentIndex}/{foods.length}
+          </span>
+          <ProfileBadge />
+        </div>
       </header>
 
       {/* Progress bar */}
