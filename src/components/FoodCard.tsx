@@ -57,6 +57,24 @@ const FoodCard = ({ food, onSwipeLeft, onSwipeRight }: FoodCardProps) => {
           {food.description}
         </p>
 
+        {/* Address */}
+        <p className="text-xs font-mono text-muted-foreground text-center mb-2 opacity-70">
+          📍 {food.address}
+        </p>
+
+        {/* View on Map */}
+        <div className="flex justify-center mb-3">
+          <a
+            href={food.mapUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-1 text-xs font-mono rounded-md border border-neon-green/50 text-neon-green hover:bg-neon-green/10 transition-colors"
+            onClick={(e) => e.stopPropagation()}
+          >
+            🗺️ View on Map
+          </a>
+        </div>
+
         {/* Tags */}
         <div className="flex flex-wrap justify-center gap-2">
           {food.tags.map((tag) => (
